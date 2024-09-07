@@ -167,3 +167,5 @@ cython_debug/
 ## Files and folder
 
 database
+*.mp4
+
