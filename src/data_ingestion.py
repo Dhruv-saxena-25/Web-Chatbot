@@ -1,4 +1,4 @@
-from langchain.document_loaders import UnstructuredURLLoader
+from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain_chroma import Chroma 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -17,8 +17,14 @@ URLs = [
     "https://zepanalytics.com/courses/python-programming-for-data-science-a-z",
     "https://zepanalytics.com/courses/microsoft-power-bi-a-complete-guide-2023-edition",
     "https://zepanalytics.com/courses/cnn-everything-about-convolution-neural-networks",
-    
-        ]
+    "https://zepanalytics.com/courses/the-complete-deep-learning-guide",
+    "https://zepanalytics.com/courses/apache-spark-hands-on-with-big-data",
+    "https://zepanalytics.com/courses/sql-for-data-analysis",
+    "https://zepanalytics.com/courses/data-science-analytics-career-guide-interview-qas",
+    "https://zepanalytics.com/cms/about-us",
+    "https://zepanalytics.com/cms/about-us",
+    "",
+    ]
 
 def ingestion():
     loder = UnstructuredURLLoader(urls= URLs)

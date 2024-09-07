@@ -8,7 +8,6 @@ from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_core.messages import HumanMessage, AIMessage
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -18,10 +17,13 @@ load_dotenv()
 
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 system_prompt = (
-    "You are an assistant for question-answering tasks. "
+    "You are an assistant for question-answering tasks for zep analytics educational company."
+    "If person greets you greet them, back nicely."
     "Use the following pieces of retrieved context to answer the question "
     "If you don't know the answer, say that you don't know."
     "Use three sentences maximum and keep the answer concise."
+    
+    ""
     "\n\n"
     "{context}"
 )
